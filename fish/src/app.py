@@ -31,7 +31,7 @@ class AquariumApp:
             return
         self.fish_count -= number
         self.protected_DEAD_FISH += number
-
+       
         if number > 1:
             print(f"{number} fish have died.")
         else:
@@ -42,6 +42,9 @@ class AquariumApp:
 # Initialize an instance of the class and print some attributes
 my_aquarium = AquariumApp(5, "blue", "red")
 
+for _ in range(4):
+    my_aquarium.start()
+    my_aquarium.die_fish(2)
 
 #Fish_count= my_aquarium.fish_count
 # print(f"Fish_count {Fish_count}")
@@ -49,5 +52,5 @@ my_aquarium = AquariumApp(5, "blue", "red")
 
 # print(f"Eye_color: {my_aquarium.eye_color}")
 # print(f"Skin color: {my_aquarium.skin_color}")
-my_aquarium.start()
-my_aquarium.die_fish(2)
+# my_aquarium.start()
+# my_aquarium.die_fish(2)
