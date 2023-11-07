@@ -44,12 +44,17 @@ my_aquarium = AquariumApp(5, "blue", "red")
 #     my_aquarium.start()
 #     my_aquarium.die_fish(2)
 
+iteration_count = 0
+
 while my_aquarium.fish_count > 0:
     my_aquarium.start()
     my_aquarium.die_fish(2)
+    iteration_count +=1
     
 print("All fish are dead.")
 print("GAME OVER")
+print(f"Number of iterations until all fish died: {iteration_count}")
+
 #Fish_count= my_aquarium.fish_count
 # print(f"Fish_count {Fish_count}")
 # # or to make it shorter, we call the instance with its attribute
