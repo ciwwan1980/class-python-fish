@@ -26,8 +26,6 @@ class AquariumApp:
 
     def die_fish(self, number):
         if self.fish_count == 0:
-            print("All fish are dead.")
-            print("GAME OVER")
             return
        
         if number > self.fish_count:  
@@ -35,16 +33,23 @@ class AquariumApp:
 
         self.fish_count -= number
         self.protected_DEAD_FISH += number
+            
 
 # Initialize an instance of the class and print some attributes
 
 # Initialize an instance of the class and print some attributes
 my_aquarium = AquariumApp(5, "blue", "red")
 
-for _ in range(4):
+# for _ in range(3):
+#     my_aquarium.start()
+#     my_aquarium.die_fish(2)
+
+while my_aquarium.fish_count > 0:
     my_aquarium.start()
     my_aquarium.die_fish(2)
-
+    
+print("All fish are dead.")
+print("GAME OVER")
 #Fish_count= my_aquarium.fish_count
 # print(f"Fish_count {Fish_count}")
 # # or to make it shorter, we call the instance with its attribute
