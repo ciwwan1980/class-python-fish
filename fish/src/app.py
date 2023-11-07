@@ -29,13 +29,12 @@ class AquariumApp:
             print("All fish are dead.")
             print("GAME OVER")
             return
+       
+        if number > self.fish_count:  
+            number = self.fish_count 
+
         self.fish_count -= number
         self.protected_DEAD_FISH += number
-       
-        if number > 1:
-            print(f"{number} fish have died.")
-        else:
-            print("A fish has died.")
 
 # Initialize an instance of the class and print some attributes
 
