@@ -23,8 +23,25 @@ class AquariumApp:
         )
         print(f"The fish have now been swimming {self.PRIVATE_SWIM_COUNT} times.")
 
+
+    def die_fish(self, number):
+        if self.fish_count == 0:
+            print("All fish are dead.")
+            print("GAME OVER")
+            return
+        self.fish_count -= number
+        self.protected_DEAD_FISH += number
+
+        if number > 1:
+            print(f"{number} fish have died.")
+        else:
+            print("A fish has died.")
+
+# Initialize an instance of the class and print some attributes
+
 # Initialize an instance of the class and print some attributes
 my_aquarium = AquariumApp(5, "blue", "red")
+
 
 #Fish_count= my_aquarium.fish_count
 # print(f"Fish_count {Fish_count}")
@@ -33,3 +50,4 @@ my_aquarium = AquariumApp(5, "blue", "red")
 # print(f"Eye_color: {my_aquarium.eye_color}")
 # print(f"Skin color: {my_aquarium.skin_color}")
 my_aquarium.start()
+my_aquarium.die_fish(2)
